@@ -1,67 +1,58 @@
 
 function CarShoppingTitle(props) {
 	return(<div>
-				<h2>{props.title}</h2>
+				<h2 className="title intro">{props.title}</h2>
 				<p>{props.subtitle}</p>
 			</div>);
 }
 
-function CarOption(props) {
+function CarShoppingOption(props) {
 	return(<div>
-				<h2>Choose Options</h2>
+				<h2 className="title">Choose Options</h2>
 				<p>New Only <input type="checkbox" id="coding" name="interest" value="coding" checked/></p>
-				<p>Select Type<select></select></p>
+				<br/>
+				<span>Select type</span>
+				<span>
+					<select>
+						<option value="all">All</option>
+						<option value="cars">Cars</option>
+						<option value="trucks">Trucks</option>
+						<option value="convertibles">Convertibles</option>
+					</select>
+				</span>
 			</div>);
 }
 
-function BuyButton() {
-	return(
-		<button>Buy Now</button>
-		);
-}
-
-function TableTopDetails(props) {
-	return(<th>{props.detail}</th>
-		);
-}
-
-function TableTop(props) {
-	return(<tr>
-				<TableTopDetails detail = {props.details[0]} />
-				<TableTopDetails detail = {props.details[1]} />
-				<TableTopDetails detail = {props.details[2]} />
-				<TableTopDetails detail = {props.details[3]} /> 
-            </tr>
-		);
-}
-
-function TableBottom(props) {
-	return(	<tr>
-				<td>2013</td>
-	            <td>A</td>
-	            <td>$32000</td>
-	            <td><BuyButton /></td>
-	        </tr>);
-}
-
-function CarTable(props) {
-	return(	<table>
-				<TableTop details = {["Year", "Model", "Price", "Buy"]}/>
-				<TableBottom />
-				<TableTop details = {["Year", "Model", "Price", "Buy"]}/>
-				<TableBottom />
-				<TableTop details = {["Year", "Model", "Price", "Buy"]}/>
-				<TableBottom />
-			</table>);
-}
-
-function CarList(props) {
+function DisplayGrid(props) {
 	return(
 			<div>
-				<h2>{props.header}</h2>
-				<ul>
-					<CarTable item = {props.items[0]} />					
-				</ul>
+				<table>
+					<thead>
+						<tr>
+							<th>Year</th>
+							<th>Model</th>
+							<th>Price</th>
+							<th>Buy</th>	
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>{props.year}</td>
+							<td>{props.model}</td>
+							<td>{props.price}</td>
+							<td><button>Buy</button></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		);
+}
+
+function Cars(props) {
+	return(
+			<div>
+				<h2 className="title">{props.header}</h2>
+				<DisplayGrid year="2013" model="A" price="32000" />
 			</div>
 		);
 }
@@ -70,10 +61,10 @@ function CarShopping(props) {
 	return (
 				<div>
 					<CarShoppingTitle title = "Welcome to React Transportation" subtitle = "The best place to buy vehicles online" />
-					<CarOption title = "Choose option" value = {["NotAll", "Cars", "Trucs", "Convertibles"]}/>
-					<CarList header = "Cars" year = {["2013", "2011", "2016"]} />
-					<CarList header = "Trucks" year = {["2014", "2013"]}/>				
-					<CarList header = "Convertibles" year = {["2009", "2010", "2012", "2017"]}/>
+					<CarShoppingOption title = "Choose option" value = {["NotAll", "Cars", "Trucs", "Convertibles"]}/>
+					<Cars header="Cars"/>
+					<Cars header="Cars"/>
+					<Cars header="Cars"/>
 				</div>
 		);
 
