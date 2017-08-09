@@ -1,0 +1,235 @@
+.header {
+	color: red;
+}
+
+
+.title {
+    color: #646464;
+    font: normal 1.2em/1.2em "Open Sans",Verdana,Geneva,sans-serif,sans-serif;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    -webkit-font-smoothing: antialiased;
+    text-align: left;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+.text {
+	margin-bottom: 1.41575em;
+	font-size: 1em;
+    line-height: 1.6em;
+    color: #3c3c3c;
+    text-align: left;
+    font-family: "Open Sans",Verdana,Geneva,sans-serif,sans-serif;
+    margin: 0;
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+.checkbox {
+	line-height: 1.4em;
+	box-sizing: border-box;
+	padding: 0;
+	font-size: 100%;
+	margin: 0;
+	vertical-align: baseline;
+	font-family: sans-serif;
+	color: #222;
+	-webkit-appearance: checkbox;
+	background-color: initial;
+	-webkit-rtl-ordering: logical;
+	user-select: text;
+	cursor: auto;
+	}
+
+.select {
+		line-height: 1.6em;
+		font-family: "Open Sans",Verdana,Geneva,sans-serif,sans-serif;
+		font-size: 1em;
+
+		font-size: 100%;
+		margin: 0;
+		vertical-align: baseline;
+		font-family: sans-serif;
+		color: #222;
+		overflow: visible !important;
+		background-color: rgb(248, 248, 248);
+		border-width: 1px;
+		border-style: solid;
+		border-color: rgb(166, 166, 166);
+		border-image: initial;
+		-webkit-appearance: menulist;
+		box-sizing: border-box;
+		align-items: center;
+		white-space: pre;
+		-webkit-rtl-ordering: logical;
+		cursor: default;
+		border-radius: 5px;
+		text-rendering: auto;
+		color: initial;
+		letter-spacing: normal;
+		word-spacing: normal;
+		text-transform: none;
+		text-indent: 0px;
+		text-shadow: none;
+		display: inline-block;
+		text-align: start;
+		margin: 0em;
+		font: 11px system-ui;
+}
+
+.div-table {
+	/*	padding-left: 1em;
+		list-style: disc outside none;
+		padding: 0 0 0 1em;
+		margin: 1em 0;
+		color: #3c3c3c;
+		line-height: 1.4em;
+		display: block;
+		list-style-type: disc;
+		-webkit-margin-before: 1em;
+		-webkit-margin-after: 1em;
+		-webkit-margin-start: 0px;
+		-webkit-margin-end: 0px;
+		-webkit-padding-start: 40px;
+		overflow-wrap: break-word;
+		word-wrap: break-word;
+		word-break: break-word;
+		text-align: left;
+		font-family: "Open Sans",Verdana,Geneva,sans-serif,sans-serif;
+		border-color: red;*/
+
+		/*  width:100%;
+		  margin:20px 0;
+		  background-color: pink;
+		  border-collapse:collapse;
+		  font-size:16px;
+		  border-color:gray;
+		  border-spacing:2px;
+
+		  padding-left: 1em;
+		  color: #3c3c3c;
+		  margin: 1em 0;
+		  text-align: center;
+		font-family: "Open Sans",Verdana,Geneva,sans-serif,sans-serif;*/
+}
+
+.table {
+	/*	width: 100%;
+		margin: 20px 0;
+		border-collapse: collapse;
+		font-size: 16px;
+		line-height: 1.4em;
+		table-layout: auto;
+		border-spacing: 0;
+		display: table;
+		color: #3c3c3c;
+		text-align: left;
+		font-family: "Open Sans",Verdana,Geneva,sans-serif,sans-serif;
+		font-style: normal;
+
+		display: table-row-group;
+		vertical-align: middle;
+		
+		border-collapse: collapse;
+		font-size: 16px;*/
+
+
+
+
+}
+ .thead {
+ 	    /*display: table-row;
+	    vertical-align: inherit;
+	    border-color: inherit;
+	    width: 100%;
+	    margin: 20px 0;
+	    border-collapse: collapse;
+	    font-size: 16px;
+	    border-color: red;*/
+
+	/*    background-color:#eee;
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #c8c8c8;
+    font-size: 14px;*/
+ }
+
+
+table{
+  width:100%;
+  margin:20px 0;
+  border-collapse:collapse;
+  font-size:16px;
+  border-color:gray;
+  border-spacing:2px;
+  font-family: "Open Sans",Verdana,Geneva,sans-serif,sans-serif;
+  line-height: 1.4em;
+}
+
+th {
+   background-color:#eee;
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #c8c8c8;
+    font-size: 16px;
+}
+
+tr{
+   /*border: 1px solid #c8c8c8;*/
+  display:table-row;
+  text-align: center;
+ /* verticle-align:inherit;
+  border-color:inherit;
+  padding: 1em;*/
+}
+
+td{
+  border: 1px solid #c8c8c8;
+}
+
+button {
+  cursor: pointer;
+  -webkit-appearance: button;
+    border: 1px solid gray;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 0 0 #fff;
+    color: #333;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #f1f1f1;
+    background-clip: padding-box;
+    margin:10px;
+    padding: 6px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

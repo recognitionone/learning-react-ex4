@@ -1,32 +1,40 @@
 
 function CarShoppingTitle(props) {
 	return(<div>
-				<h2 className="title intro">{props.title}</h2>
-				<p>{props.subtitle}</p>
+				<h2 className="title">{props.title}</h2>
+				<p className="text">{props.subtitle}</p>
 			</div>);
 }
 
 function CarShoppingOption(props) {
 	return(<div>
 				<h2 className="title">Choose Options</h2>
-				<p>New Only <input type="checkbox" id="coding" name="interest" value="coding" checked/></p>
-				<br/>
-				<span>Select type</span>
-				<span>
-					<select>
-						<option value="all">All</option>
-						<option value="cars">Cars</option>
-						<option value="trucks">Trucks</option>
-						<option value="convertibles">Convertibles</option>
-					</select>
-				</span>
+				<p className="text">New Only <input 
+								className="checkbox"
+								type="checkbox" 
+								id="coding" 
+								name="interest" 
+								value="coding" 
+								defaultChecked/></p>
+				<div>
+				<span className="text">Select type</span>
+				
+				
+				<select className="select">
+					<option value={props.value[0]}>{props.value[0]}</option>
+					<option value={props.value[1]}>{props.value[1]}</option>
+					<option value={props.value[2]}>{props.value[2]}</option>
+					<option value={props.value[3]}>{props.value[3]}</option>
+				</select>
+				
+				</div>
 			</div>);
 }
 
-function DisplayGrid(props) {
+function DisplayTable(props) {
 	return(
-			<div>
-				<table>
+			<div className="div-table">
+				<table className="table">
 					<thead>
 						<tr>
 							<th>Year</th>
@@ -37,9 +45,9 @@ function DisplayGrid(props) {
 					</thead>
 					<tbody>
 						<tr>
-							<td>{props.year}</td>
-							<td>{props.model}</td>
-							<td>{props.price}</td>
+							<td>{props.feature.year}</td>
+							<td>{props.feature.model}</td>
+							<td>${props.feature.price}</td>
 							<td><button>Buy</button></td>
 						</tr>
 					</tbody>
@@ -49,22 +57,41 @@ function DisplayGrid(props) {
 }
 
 function Cars(props) {
+	console.log(props);
 	return(
 			<div>
 				<h2 className="title">{props.header}</h2>
-				<DisplayGrid year="2013" model="A" price="32000" />
+				{props.parameters.map(object => <DisplayTable feature={object} key={object.id}/>)}
 			</div>
 		);
 }
 
 function CarShopping(props) {
+	const cars = [
+		{year:2113, model:"1A", price:"132000", id:"0"},
+		{year:2014, model:"B", price:"32000", id:"1"},
+		{year:2015, model:"C", price:"32000", id:"2"},
+	]
+
+	const trucks = [
+		{year:2113, model:"1A", price:"132000", id:"0"},
+		{year:2014, model:"B", price:"32000", id:"1"},
+		{year:2015, model:"C", price:"32000", id:"2"},
+	]
+
+	const convertibles = [
+		{year:2113, model:"1A", price:"132000", id:"0"},
+		{year:2014, model:"B", price:"32000", id:"1"},
+		{year:2015, model:"C", price:"32000", id:"2"},
+	]
+
 	return (
 				<div>
 					<CarShoppingTitle title = "Welcome to React Transportation" subtitle = "The best place to buy vehicles online" />
 					<CarShoppingOption title = "Choose option" value = {["NotAll", "Cars", "Trucs", "Convertibles"]}/>
-					<Cars header="Cars"/>
-					<Cars header="Cars"/>
-					<Cars header="Cars"/>
+					<Cars header="Cars" parameters={cars}/>
+					<Cars header="Trucks" parameters={trucks}/>
+					<Cars header="Convertibles" parameters={convertibles}/>
 				</div>
 		);
 
